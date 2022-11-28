@@ -1,0 +1,12 @@
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\bin\Debug\net6.0\AgroSafari.Core.deps.json
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\bin\Debug\net6.0\AgroSafari.Core.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\bin\Debug\net6.0\AgroSafari.Core.pdb
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.csproj.AssemblyReference.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.AssemblyInfoInputs.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.AssemblyInfo.cs
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.csproj.CoreCompileInputs.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\refint\AgroSafari.Core.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\AgroSafari.Core.pdb
+C:\ProjetoAPI\AgroSafari\AgroSafari.Core\obj\Debug\net6.0\ref\AgroSafari.Core.dll

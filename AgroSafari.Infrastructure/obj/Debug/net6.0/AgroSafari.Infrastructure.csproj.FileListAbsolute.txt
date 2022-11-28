@@ -1,0 +1,17 @@
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\bin\Debug\net6.0\AgroSafari.Infrastructure.deps.json
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\bin\Debug\net6.0\AgroSafari.Infrastructure.runtimeconfig.json
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\bin\Debug\net6.0\AgroSafari.Infrastructure.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\bin\Debug\net6.0\AgroSafari.Infrastructure.pdb
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\bin\Debug\net6.0\AgroSafari.Core.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\bin\Debug\net6.0\AgroSafari.Core.pdb
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.csproj.AssemblyReference.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.AssemblyInfoInputs.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.AssemblyInfo.cs
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.csproj.CoreCompileInputs.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.csproj.CopyComplete
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\refint\AgroSafari.Infrastructure.dll
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.pdb
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\AgroSafari.Infrastructure.genruntimeconfig.cache
+C:\ProjetoAPI\AgroSafari\AgroSafari.Infrastructure\obj\Debug\net6.0\ref\AgroSafari.Infrastructure.dll

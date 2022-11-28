@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LXCN3xByq35JB6PvKRshdVRH/0kk0xGx68hHABn7BIo=",
+  "Source": "AgroSafari.API",
+  "BasePath": "_content/AgroSafari.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
