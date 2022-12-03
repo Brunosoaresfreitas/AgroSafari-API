@@ -2,16 +2,16 @@
 {
     public class ServiceProviderModel
     {
+        public int Id { get; private set; }
         public string FullName { get; private set; }
         public string Email { get; private set; }
-        public int Age { get; private set; }
         public string Cnpj { get; private set; }
 
-        public ServiceProviderModel(string fullName, string email, int age, string cnpj)
+        public ServiceProviderModel(int id, string fullName, string email, string cnpj)
         {
+            Id = id;
             FullName = fullName;
             Email = email;
-            Age = age;
             Cnpj = cnpj;
         }
     }

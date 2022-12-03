@@ -20,9 +20,9 @@ namespace AgroSafari.Application.Queries.GetServiceProviderById
             if (serviceProvider == null) return null;
 
             var serviceProviderId = new ServiceProviderModel(
+                serviceProvider.Id,
                 serviceProvider.FullName,
                 serviceProvider.Email,
-                serviceProvider.Age,
                 serviceProvider.Cnpj);
 
             return serviceProviderId;

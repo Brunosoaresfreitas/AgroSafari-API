@@ -21,10 +21,6 @@ namespace AgroSafari.Application.Validators
                 .NotNull().WithMessage("O valor deve ser informado!")
                 .NotEmpty().WithMessage("O valor deve ser informado!");
 
-            RuleFor(s => s.IdClient)
-                .NotNull().WithMessage("O Id do cliente deve ser informado!")
-                .NotEmpty().WithMessage("O Id do cliente deve ser informado!");
-
             RuleFor(s => s.IdServiceProvider)
                 .NotNull().WithMessage("O Id do prestador de serviço deve ser informado!")
                 .NotEmpty().WithMessage("O Id do prestador de serviço deve ser informado!");

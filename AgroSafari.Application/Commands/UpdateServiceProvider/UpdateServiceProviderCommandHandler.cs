@@ -16,7 +16,7 @@ namespace AgroSafari.Application.Commands.UpdateServiceProvider
         {
             var serviceProviderToBeUpdated = await _serviceProviderRepository.GetByIdAsync(request.Id);
 
-            serviceProviderToBeUpdated.Update(request.FullName, request.Email, request.Age, request.Cnpj);
+            serviceProviderToBeUpdated.Update(request.FullName, request.Email, request.Cnpj);
             await _serviceProviderRepository.SaveChangesAsync();
 
             return Unit.Value;

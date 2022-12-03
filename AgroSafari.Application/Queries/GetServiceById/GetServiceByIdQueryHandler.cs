@@ -20,6 +20,7 @@ namespace AgroSafari.Application.Queries.GetServiceById
             if (service == null) return null;
 
             var serviceDetail = new ServiceDetailViewModel(
+                service.Id,
                 service.Title,
                 service.Description,
                 service.ServiceProvider.FullName,

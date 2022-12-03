@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgroSafari.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(AgroSafariDbContext))]
-    [Migration("20221126130758_InitialMigration")]
+    [Migration("20221203002034_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -54,6 +54,14 @@ namespace AgroSafari.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Clients");
@@ -71,7 +79,10 @@ namespace AgroSafari.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("IdClient")
+                    b.Property<DateTime?>("FinishedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("IdClient")
                         .HasColumnType("int");
 
                     b.Property<int>("IdServiceProvider")
@@ -79,6 +90,9 @@ namespace AgroSafari.Infrastructure.Persistence.Migrations
 
                     b.Property<DateTime?>("PostedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("ServiceStatus")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -104,9 +118,6 @@ namespace AgroSafari.Infrastructure.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
                     b.Property<string>("Cnpj")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -122,6 +133,14 @@ namespace AgroSafari.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("ServiceProviders");
@@ -132,8 +151,7 @@ namespace AgroSafari.Infrastructure.Persistence.Migrations
                     b.HasOne("AgroSafari.Core.Entities.Client", "Client")
                         .WithMany("HiredServices")
                         .HasForeignKey("IdClient")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("AgroSafari.Core.Entities.ServiceProvider", "ServiceProvider")
                         .WithMany("OwnedServices")

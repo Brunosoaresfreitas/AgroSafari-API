@@ -2,7 +2,9 @@
 using AgroSafari.Application.Commands.CreateClient;
 using AgroSafari.Application.Validators;
 using AgroSafari.Core.Repositories;
+using AgroSafari.Core.Services;
 using AgroSafari.Infrastructure;
+using AgroSafari.Infrastructure.AuthServices;
 using AgroSafari.Infrastructure.Persistence.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -35,6 +37,7 @@ namespace DevFreela.API
             services.AddScoped<IServiceRepository, ServiceRepository>();
             services.AddScoped<IClientRepository, ClientRepository>();
             services.AddScoped<IServiceProviderRepository, ServiceProviderRepository>();
+            services.AddScoped<IAuthService, AuthService>();
 
 
             services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)));

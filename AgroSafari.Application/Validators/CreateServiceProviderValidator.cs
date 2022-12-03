@@ -17,11 +17,6 @@ namespace AgroSafari.Application.Validators
                 .NotEmpty().WithMessage("O E-mail deve ser informado!")
                 .EmailAddress().WithMessage("E-mail inválido!");
 
-
-            RuleFor(c => c.Age)
-                .NotEmpty().WithMessage("A idade deve ser informada!")
-                .Must(ValidAge).WithMessage("O prestador de serviço deve ter no mínimo 18 anos!");
-
             RuleFor(c => c.Password)
                 .NotEmpty().WithMessage("A senha deve ser informada!")
                 .NotNull().WithMessage("A senha deve ser informada!")
@@ -31,11 +26,6 @@ namespace AgroSafari.Application.Validators
                 .NotEmpty().WithMessage("O Cnpj deve ser informado!")
                 .NotNull().WithMessage("O Cnpj deve ser informado!")
                 .Must(ValidCnpj).WithMessage("Cnpj inválido!");
-        }
-
-        public bool ValidAge(int age)
-        {
-            return age >= 18;
         }
 
         public bool ValidPassword(string password)

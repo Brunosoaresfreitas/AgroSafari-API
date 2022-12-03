@@ -21,7 +21,7 @@ namespace AgroSafari.Application.Queries.GetAllServiceProviders
             if (serviceProviders == null) return null;
 
             var serviceProviderModel = serviceProviders.Select(
-                s => new ServiceProviderModel(s.FullName, s.Email, s.Age, s.Cnpj))
+                s => new ServiceProviderModel(s.Id, s.FullName, s.Email, s.Cnpj))
                 .ToList();
 
             return serviceProviderModel;

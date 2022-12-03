@@ -1,10 +1,11 @@
 ﻿using AgroSafari.Application.Commands.CreateClient;
 using AgroSafari.Application.Commands.DeleteClient;
+using AgroSafari.Application.Commands.LoginClient;
 using AgroSafari.Application.Commands.UpdateClient;
 using AgroSafari.Application.Queries.GetAllClients;
 using AgroSafari.Application.Queries.GetClientById;
+using AgroSafari.Application.ViewModels;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgroSafariAPI.Controllers
@@ -69,6 +70,19 @@ namespace AgroSafariAPI.Controllers
             await _mediator.Send(command);
 
             return NoContent();
+        }
+
+        [HttpPut("login")]
+        public async Task<IActionResult> Login([FromBody] LoginClientCommand command)
+        {
+            var loginUserViewModel = await _mediator.Send(command);
+
+            if (loginUserViewModel == null) 
+            {
+                return BadRequest();
+            }
+
+            return Ok(loginUserViewModel);
         }
     }
 }

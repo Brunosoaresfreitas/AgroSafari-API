@@ -20,7 +20,7 @@ namespace AgroSafari.Application.Queries.GetAllServices
             if (query == null) return null;
 
             var services = query
-                .Select(s => new ServiceViewModel(s.Title, s.Description, s.TotalCost))
+                .Select(s => new ServiceViewModel(s.Id, s.Title, s.Description, s.TotalCost))
                 .ToList();
 
             return services;

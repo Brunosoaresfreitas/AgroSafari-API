@@ -1,10 +1,13 @@
-﻿using AgroSafari.Application.Commands.CreateService;
+﻿using AgroSafari.Application.Commands.CheckServiceStatus;
+using AgroSafari.Application.Commands.CreateService;
 using AgroSafari.Application.Commands.DeleteService;
+using AgroSafari.Application.Commands.FinishService;
+using AgroSafari.Application.Commands.HireService;
+using AgroSafari.Application.Commands.MakeServiceAvailable;
 using AgroSafari.Application.Commands.UpdateService;
 using AgroSafari.Application.Queries.GetAllServices;
 using AgroSafari.Application.Queries.GetServiceById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgroSafariAPI.Controllers
@@ -60,6 +63,38 @@ namespace AgroSafariAPI.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}/MakeAvailable")]
+        public async Task<IActionResult> MakeAvailable(int id)
+        {
+            var command = new MakeAvailableCommand(id);
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+
+        [HttpPut("{id}/Hire")]
+        public async Task<IActionResult> Hire(int id)
+        {
+            var command = new HireServiceCommand(id);
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
+
+        [HttpPut("{id}/finish")]
+        public async Task<IActionResult> Finish(int id)
+        {
+            var command = new FinishServiceCommand(id);
+
+            await _mediator.Send(command);
+
+            return NoContent();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -68,6 +103,16 @@ namespace AgroSafariAPI.Controllers
             await _mediator.Send(command);
 
             return NoContent();
+        }
+
+        [HttpGet("{id}/Status")]
+        public async Task<IActionResult> GetServiceStatus(int id)
+        {
+            var command = new CheckServiceStatusCommand(id);
+
+            var service = await _mediator.Send(command);
+
+            return Ok(service);
         }
     }
 }

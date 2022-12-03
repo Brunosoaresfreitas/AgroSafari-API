@@ -15,7 +15,7 @@ namespace AgroSafari.Application.Commands.CreateServiceProvider
 
         public async Task<int> Handle(CreateServiceProviderCommand request, CancellationToken cancellationToken)
         {
-            var serviceProvider = new ServiceProvider(request.FullName, request.Email, request.Age, request.Cnpj);
+            var serviceProvider = new ServiceProvider(request.FullName, request.Email, request.Password, request.Cnpj);
 
             await _serviceProviderRepository.CreateAsync(serviceProvider);
             await _serviceProviderRepository.SaveChangesAsync();

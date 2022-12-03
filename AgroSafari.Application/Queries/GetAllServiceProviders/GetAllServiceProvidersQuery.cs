@@ -7,7 +7,6 @@ namespace AgroSafari.Application.Queries.GetAllServiceProviders
     public class GetAllServiceProvidersQuery : IRequest<List<ServiceProviderModel>>
     {
         public string Query { get; private set; }
-
         public GetAllServiceProvidersQuery(string query)
         {
             Query = query;

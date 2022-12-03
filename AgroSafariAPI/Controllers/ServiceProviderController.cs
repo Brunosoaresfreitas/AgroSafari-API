@@ -20,13 +20,13 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get(string query)
+        public async Task<IActionResult> GetAll(string query)
         {
-            var serviceProviders = new GetAllServiceProvidersQuery(query);
+            var command = new GetAllServiceProvidersQuery(query);
 
-            await _mediator.Send(query);
+            var servicesProviders = await _mediator.Send(command);
 
-            return Ok(serviceProviders);
+            return Ok(servicesProviders);
         }
 
         [HttpGet("{id}")]

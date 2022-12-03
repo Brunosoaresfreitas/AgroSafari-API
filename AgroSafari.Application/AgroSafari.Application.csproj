@@ -16,4 +16,8 @@
     <ProjectReference Include="..\AgroSafari.Infrastructure\AgroSafari.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\LoginServiceProvider\" />
+  </ItemGroup>
+
 </Project>

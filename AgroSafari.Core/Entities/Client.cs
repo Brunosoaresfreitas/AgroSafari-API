@@ -2,15 +2,17 @@
 {
     public class Client : BaseEntity
     {
-        public Client(string fullName, string email, string cpf, DateTime birthDate)
+        public Client(string fullName, string email, string password, string cpf, DateTime birthDate)
         {
             FullName = fullName;
             Email = email;
+            Password = password;
             Age = DateTime.Now.Year - birthDate.Year;
             Cpf = cpf;
             BirthDate = birthDate;
             CreatedAt = DateTime.Now;
 
+            Role = "Client";
             HiredServices = new List<Service>();
         }
 
@@ -18,6 +20,8 @@
         public string Email { get; private set; }
         public int Age { get; private set; }
         public string Cpf { get; private set; }
+        public string Password { get; private set; }
+        public string Role { get; private set; }
         public DateTime BirthDate { get; private set; }
         public DateTime CreatedAt { get; private set; }
 

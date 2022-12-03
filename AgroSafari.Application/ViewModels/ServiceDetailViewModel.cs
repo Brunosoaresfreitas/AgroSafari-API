@@ -4,8 +4,9 @@ namespace AgroSafari.Application.ViewModels
 {
     public class ServiceDetailViewModel
     {
-        public ServiceDetailViewModel(string title, string description, string serviceProviderFullName, string clientFullName, decimal totalCost, DateTime? postedAt)
+        public ServiceDetailViewModel(int id, string title, string description, string serviceProviderFullName, string clientFullName, decimal totalCost, DateTime? postedAt)
         {
+            Id = id;
             Title = title;
             Description = description;
             ServiceProviderFullName = serviceProviderFullName;
@@ -14,6 +15,7 @@ namespace AgroSafari.Application.ViewModels
             PostedAt = postedAt;
         }
 
+        public int Id { get; private set; }
         public string Title { get; private set; }
         public string Description { get; private set; }
         public string ServiceProviderFullName { get; private set; }

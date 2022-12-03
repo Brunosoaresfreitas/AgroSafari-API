@@ -38,5 +38,12 @@ namespace AgroSafari.Infrastructure.Persistence.Repositories
         {
             _dbContext.Clients.Remove(client);
         }
+
+        public async Task<Client> GetUserByEmailAndPasswordAsync(string email, string passwordHash)
+        {
+            return await _dbContext
+                .Clients.
+                SingleOrDefaultAsync(c => c.Email == email && c.Password == passwordHash);
+        }
     }
 }
