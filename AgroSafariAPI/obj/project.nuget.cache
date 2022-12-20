@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JO5KOvOUdWcgdZ7+LVhx6Ei9m3iGDpI1HKEO/edY5iehSbm1VllN/cay5pIg3VIQknzCxjLAQA4qgEXAJ+tv6g==",
+  "dgSpecHash": "qYXeqnhm77UJUoGQ0yK8UrFN3KiF/U0wSNguxrhcbuUY7BLOJxMWTksF2G0yPlFo8RR2O2decA/lJV/WuLE6OQ==",
   "success": true,
   "projectFilePath": "C:\\ProjetoAPI\\AgroSafari\\AgroSafariAPI\\AgroSafari.API.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Bruno\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

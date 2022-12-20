@@ -4,13 +4,14 @@ using AgroSafari.Application.Commands.LoginClient;
 using AgroSafari.Application.Commands.UpdateClient;
 using AgroSafari.Application.Queries.GetAllClients;
 using AgroSafari.Application.Queries.GetClientById;
-using AgroSafari.Application.ViewModels;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgroSafariAPI.Controllers
 {
     [Route("api/clients")]
+
     public class ClientController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -20,8 +21,8 @@ namespace AgroSafariAPI.Controllers
             _mediator = mediator;
         }
 
-
         [HttpGet]
+        [Authorize(Roles = "Client")]
         public async Task<IActionResult> Get(string query)
         {
             var getAllClientsQuery = new GetAllClientsQuery(query);
@@ -32,6 +33,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Client")]
         public async Task<IActionResult> GetById(int id)
         {
             var query = new GetClientByIdQuery(id);
@@ -47,6 +49,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody] CreateClientCommand command)
         {
             var id = await _mediator.Send(command);
@@ -55,7 +58,8 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] UpdateClientCommand command)
+        [Authorize(Roles = "Client")]
+        public async Task<IActionResult> Update([FromBody] UpdateClientCommand command)
         {
             await _mediator.Send(command);
 
@@ -63,6 +67,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Client")]
         public async Task<IActionResult> Delete(int id)
         {
             var command = new DeleteClientCommand(id);
@@ -73,6 +78,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpPut("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginClientCommand command)
         {
             var loginUserViewModel = await _mediator.Send(command);
@@ -81,7 +87,7 @@ namespace AgroSafariAPI.Controllers
             {
                 return BadRequest();
             }
-
+            
             return Ok(loginUserViewModel);
         }
     }

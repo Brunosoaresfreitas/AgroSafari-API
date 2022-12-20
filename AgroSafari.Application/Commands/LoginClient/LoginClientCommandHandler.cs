@@ -28,7 +28,7 @@ namespace AgroSafari.Application.Commands.LoginClient
             // Se existir, gero o token usando os dados do usuário
             var token = _authService.GenerateJwtToken(user.Email, user.Role);
 
-            return new LoginUserViewModel(user.Email, token);
+            return new LoginUserViewModel(user.Id, user.Email, token);
         }
     }
 }

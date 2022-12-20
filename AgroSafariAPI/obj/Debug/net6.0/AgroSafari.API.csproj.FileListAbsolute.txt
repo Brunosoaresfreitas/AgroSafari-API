@@ -7,7 +7,13 @@ C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\AgroSafari.API.dll
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\AgroSafari.API.pdb
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Azure.Core.dll
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Azure.Identity.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Humanizer.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\MediatR.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -86,9 +92,4 @@ C:\ProjetoAPI\AgroSafari\AgroSafariAPI\obj\Debug\net6.0\refint\AgroSafari.API.dl
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\obj\Debug\net6.0\AgroSafari.API.pdb
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\obj\Debug\net6.0\AgroSafari.API.genruntimeconfig.cache
 C:\ProjetoAPI\AgroSafari\AgroSafariAPI\obj\Debug\net6.0\ref\AgroSafari.API.dll
-C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\MediatR.dll
-C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\MediatR.Contracts.dll
-C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\FluentValidation.dll
-C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
-C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\ProjetoAPI\AgroSafari\AgroSafariAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -15,7 +15,7 @@ namespace AgroSafari.Application.Queries.GetAllServices
 
         public async Task<List<ServiceViewModel>> Handle(GetAllServicesQuery request, CancellationToken cancellationToken)
         {
-            var query = await _serviceRepository.GetAllAsync();
+            var query = await _serviceRepository.GetAllAsync(request.Query);
 
             if (query == null) return null;
 

@@ -1,6 +1,7 @@
 ﻿using AgroSafari.Core.Entities;
 using AgroSafari.Core.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AgroSafari.Infrastructure.Persistence.Repositories
 {
@@ -23,9 +24,18 @@ namespace AgroSafari.Infrastructure.Persistence.Repositories
             _dbContext.Services.Remove(service);
         }
 
-        public async Task<List<Service>> GetAllAsync()
+        public async Task<List<Service>> GetAllAsync(string query)
         {
-            return await _dbContext.Services.ToListAsync();
+            IQueryable<Service> services = _dbContext.Services;
+
+            if (!string.IsNullOrWhiteSpace(query))
+            {
+                services = services.Where(s =>
+                            s.Title.Contains(query) ||
+                            s.Description.Contains(query));
+            }
+
+            return await services.ToListAsync();
         }
 
         public async Task<Service> GetByIdAsync(int id)

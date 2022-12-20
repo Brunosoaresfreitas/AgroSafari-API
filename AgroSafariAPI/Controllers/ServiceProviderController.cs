@@ -1,10 +1,12 @@
 ﻿using AgroSafari.Application.Commands.CreateServiceProvider;
 using AgroSafari.Application.Commands.DeleteServiceProvider;
+using AgroSafari.Application.Commands.LoginClient;
+using AgroSafari.Application.Commands.LoginServiceProvider;
 using AgroSafari.Application.Commands.UpdateClient;
 using AgroSafari.Application.Queries.GetAllServiceProviders;
 using AgroSafari.Application.Queries.GetServiceProviderById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgroSafariAPI.Controllers
@@ -20,6 +22,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "ServiceProvider")]
         public async Task<IActionResult> GetAll(string query)
         {
             var command = new GetAllServiceProvidersQuery(query);
@@ -30,6 +33,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "ServiceProvider")]
         public async Task<IActionResult> GetById(int id)
         {
             var query = new GetServiceProviderByIdQuery(id);
@@ -42,6 +46,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody] CreateServiceProviderCommand command)
         {
             var id = await _mediator.Send(command);
@@ -50,6 +55,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "ServiceProvider")]
         public async Task<IActionResult> Update(int id, [FromBody] UpdateClientCommand command)
         {
             await _mediator.Send(command);
@@ -58,6 +64,7 @@ namespace AgroSafariAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "ServiceProvider")]
         public async Task<IActionResult> Delete(int id)
         {
             var command = new DeleteServiceProviderCommand(id);
@@ -65,6 +72,20 @@ namespace AgroSafariAPI.Controllers
             await _mediator.Send(command);
 
             return NoContent();
+        }
+
+        [HttpPut("login")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login([FromBody] LoginServiceProviderCommand command)
+        {
+            var loginUserViewModel = await _mediator.Send(command);
+
+            if (loginUserViewModel == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(loginUserViewModel);
         }
     }
 }

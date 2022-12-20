@@ -16,7 +16,7 @@ namespace AgroSafari.Application.Commands.HireService
         {
             var service = await _serviceRepository.GetByIdAsync(request.Id);
 
-            service.Hire();
+            service.Hire(request.IdClient);
 
             await _serviceRepository.SaveChangesAsync();
 

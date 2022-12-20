@@ -33,6 +33,13 @@ namespace AgroSafari.Infrastructure.Persistence.Repositories
             return await _dbContext.ServiceProviders.SingleOrDefaultAsync(s => s.Id == id);
         }
 
+        public async Task<ServiceProvider> GetUserByEmailAndPasswordAsync(string email, string passwordHash)
+        {
+            return await _dbContext
+                .ServiceProviders
+                .SingleOrDefaultAsync(s => s.Email == email && s.Password == passwordHash);
+        }
+
         public async Task SaveChangesAsync()
         {
              await _dbContext.SaveChangesAsync();

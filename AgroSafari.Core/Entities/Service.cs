@@ -42,11 +42,12 @@ namespace AgroSafari.Core.Entities
             }
         }
 
-        public void Hire()
+        public void Hire(int idClient)
         {
             if (ServiceStatus == ServiceStatusEnum.Available)
             {
                 ServiceStatus = ServiceStatusEnum.Hired;
+                IdClient = idClient;
             }
         }
 
